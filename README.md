@@ -9,7 +9,7 @@ The provided scripts execute the **State Transition Stress Test**, a determinist
 * `lab_google_gemini.py`: Evaluates the Gemini model family (Gemini 3.1 Pro, Gemini 2.5 Flash) using the new Google GenAI SDK.
 * `lab_openai.py`: Evaluates the OpenAI model family (GPT-4.1, GPT-5.4 paradigms) to measure the impact of latent reasoning vs. standard probabilistic generation.
 * `lab_anthropic_claude.py`: Evaluates Anthropic's Claude 4.6 Sonnet to observe the effects of strong alignment on logical coherence.
-* `lab_groq.py`: Evaluates high-density open-weight models (Llama 3.3 70B, Llama 3.1, Qwen 32B) hosted via Groq to document the "Cliff Collapse" phenomenon.
+* `lab_groq.py`: Evaluates high-density open-weight models (Llama 3.3 70B, Llama 3.1, Qwen 32B) hosted via Groq to document the Cliff Collapse phenomenon.
 
 ## ⚙️ Prerequisites and Installation
 
