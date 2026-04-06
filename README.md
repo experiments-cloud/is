@@ -11,6 +11,7 @@ The provided scripts execute the **State Transition Stress Test**, a determinist
 * `lab_anthropic_claude.py`: Evaluates Anthropic's Claude 4.6 Sonnet to observe the effects of strong alignment on logical coherence.
 * `lab_groq.py`: Evaluates high-density open-weight models (Llama 3.3 70B, Llama 3.1, Qwen 32B) hosted via Groq to document the Cliff Collapse phenomenon.
 * `lab_mechanistic_extraction.py`: Performs a forward pass on Llama-3.1-8B to extract self-attention matrices and generates the Attention Dilution heatmap, demonstrating internal context fragmentation.
+* `lab_neuro_symbolic_scaffolding.py`: Validates the proposed architectural transition (Section 5.2.1). Connects OpenAI models to a deterministic Python dictionary acting as external R/W RAM. By forcing the LLM to act as a stateless ALU, it proves that O(1) state delegation entirely bypasses attention dilution and prevents state collapse even at extreme depths (L∈{100,500,1000}).
 
 ## ⚙️ Prerequisites and Installation
 
@@ -19,7 +20,7 @@ This project requires **Python 3.8+**.
 Install the required official SDKs via pip:
 
 ```bash
-pip install google-genai openai anthropic torch transformers huggingface_hub matplotlib seaborn
+pip install google-genai openai anthropic torch transformers huggingface_hub matplotlib seaborn pandas
 ```
 
 🔐 Security and Anonymity (API Keys)
