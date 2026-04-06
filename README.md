@@ -10,6 +10,7 @@ The provided scripts execute the **State Transition Stress Test**, a determinist
 * `lab_openai.py`: Evaluates the OpenAI model family (GPT-4.1, GPT-5.4 paradigms) to measure the impact of latent reasoning vs. standard probabilistic generation.
 * `lab_anthropic_claude.py`: Evaluates Anthropic's Claude 4.6 Sonnet to observe the effects of strong alignment on logical coherence.
 * `lab_groq.py`: Evaluates high-density open-weight models (Llama 3.3 70B, Llama 3.1, Qwen 32B) hosted via Groq to document the Cliff Collapse phenomenon.
+* `lab_mechanistic_extraction.py`: Performs a forward pass on Llama-3.1-8B to extract self-attention matrices and generates the Attention Dilution heatmap, demonstrating internal context fragmentation.
 
 ## ⚙️ Prerequisites and Installation
 
@@ -18,7 +19,7 @@ This project requires **Python 3.8+**.
 Install the required official SDKs via pip:
 
 ```bash
-pip install google-genai openai anthropic
+pip install google-genai openai anthropic torch transformers huggingface_hub matplotlib seaborn
 ```
 
 🔐 Security and Anonymity (API Keys)
@@ -34,13 +35,12 @@ export GEMINI_API_KEY="your_actual_api_key_here"
 export OPENAI_API_KEY="your_actual_api_key_here"
 export ANTHROPIC_API_KEY="your_actual_api_key_here"
 export GROQ_API_KEY="your_actual_api_key_here"
+export HF_TOKEN="your_huggingface_token_here"
 ```
 On Windows (Command Prompt):
 
 ```bash
 set GEMINI_API_KEY="your_actual_api_key_here"
-set OPENAI_API_KEY="your_actual_api_key_here"
-...
 ```
 
 🔬 Usage
